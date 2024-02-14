@@ -1,4 +1,4 @@
-# IE303 - Java Technology
+# IE303 - Java Technology Excercises
 
 ## To-Do
 - [ ] Week 1
