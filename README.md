@@ -1,4 +1,4 @@
-# IE303 - Java Technology's Assignments
+# IE303 - Java Technology's Lab
 
 ## To-Do
 - [ ] Week 1
