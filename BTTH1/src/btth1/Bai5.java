@@ -39,32 +39,32 @@ public class Bai5 {
         String chuoi1, chuoi2;
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Nhap lan luot 2 chuoi vao day");
+        System.out.println("\nHãy nhập lần lượt 2 chuỗi vào bên dưới: ");
         chuoi1 = scanner.nextLine();
         chuoi2 = scanner.nextLine();
         
         // 1.
-        System.out.println("Tinh tong chieu dai cua 2 chuoi " + TongChieuDai(chuoi1, chuoi2) + "\t");
+        System.out.println("\n Tổng chiều dài 2 chuỗi là: " + TongChieuDai(chuoi1, chuoi2) + "\t");
         
         // 2.
-        System.out.println("Ba ky tu dau tien trong chuoi S1(" + chuoi1 + ") la " + LayBaKyTuDau(chuoi1) + "\t");
+        System.out.println("\nBa ký tự đầu tiên của chuỗi s1(" + chuoi1 + ") là: " + LayBaKyTuDau(chuoi1) + "\t");
         
         // 3.
-        System.out.println("Ba ky tu cuoi cua chuoi S2(" + chuoi2 + ") la " + LayBaKyTuCuoi(chuoi2) + "\t");
+        System.out.println("\nBa ký tự cuối của chuỗi s2(" + chuoi2 + ") là: " + LayBaKyTuCuoi(chuoi2) + "\t");
         
         // 4.
-        System.out.println("Ky tu thu 6 trong chuoi (" + chuoi1 + ") la " + LayKyTuThu6(chuoi1) + "\t");
+        System.out.println("\nKý tự thứ 6 trong chuỗi (" + chuoi1 + ") là: " + LayKyTuThu6(chuoi1) + "\t");
         
         // 5.
         if (Kiemtrachuoibangnhau(chuoi1, chuoi2))
-            System.out.println("2 chuoi bang nhau." + "\n");
+            System.out.println("\n2 chuỗi s1 và s2 bằng nhau." + "\n");
         else
-            System.out.println("2 chuoi khong bang nhau." + "\t");
+            System.out.println("\n2 chuỗi s1 và s2 không bằng nhau." + "\t");
         
         // 6.
         if (Checkchuoilongnhau(chuoi1, chuoi2) < 0)
-            System.out.println("Chuoi 2 khong nam trong chuoi 1. " + "\t");
+            System.out.println("\nChuỗi s2 không xuất hiện trong chuỗi s1." + "\t");
         else
-            System.out.println("Chuoi 2 nam trong chuoi 1 o vi tri " + Checkchuoilongnhau(chuoi1, chuoi2));
+            System.out.println("\nChuỗi s2 xuất hiện trong chuỗi s1 ở vị trí: " + Checkchuoilongnhau(chuoi1, chuoi2));
     }
 }
