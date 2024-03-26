@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Bai4 {
+    // Hàm đếm số chữ số
     private static int countDigits(int number) {
         int count = 0;
         while (number != 0) {
@@ -13,6 +14,7 @@ public class Bai4 {
         return count;
     }
 
+    // Hàm kiểm tra số đối xứng
     private static boolean isPalindromeNumber(int number) {
         int originalNumber = number;
         int reversedNumber = 0;
@@ -24,6 +26,7 @@ public class Bai4 {
         return originalNumber == reversedNumber;
     }
 
+    // Hàm kiểm tra số chính phương
     private static boolean isPerfectSquareNumber(int number) {
         int sqrt = (int) Math.sqrt(number);
         return sqrt * sqrt == number;
