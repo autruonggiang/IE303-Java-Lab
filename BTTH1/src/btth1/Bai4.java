@@ -39,20 +39,20 @@ public class Bai4 {
 
         do {
             try {
-                System.out.print("Nhap vao so duong n: ");
+                System.out.print("\nMời nhập vào số nguyên dương n: ");
                 n = input.nextInt();
 
                 if (n <= 0) {
-                    System.out.println("Vui long nhap mot so nguyen duong!");
+                    System.out.println("\nVui lòng hãy nhập một số nguyên dương!");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("So n phai so nguyen!");
+                System.out.println("\nSố n bạn nhập phải là số nguyên!");
                 input.next(); 
                 n = 0; 
             }
         } while (n <= 0);
 
-        System.out.print("Cac uoc so cua " + n + " la: ");
+        System.out.print("\nCác ước số của " + n + " là: ");
         for (int i = 1; i <= n; i++) {
             if (n % i == 0) {
                 System.out.print(i + " ");
@@ -61,20 +61,20 @@ public class Bai4 {
         System.out.println();
 
         int digitCount = countDigits(n);
-        System.out.println("So " + n + " co " + digitCount + " chu so.");
+        System.out.println("\nSố " + n + " có " + digitCount + " chữ số.");
 
         boolean isPalindrome = isPalindromeNumber(n);
         if (isPalindrome) {
-            System.out.println("So " + n + " la so doi xung.");
+            System.out.println("\nSố " + n + " là số đối xứng.");
         } else {
-            System.out.println("So " + n + " khong la so doi xung.");
+            System.out.println("\nSố " + n + " không phải là số đối xứng.");
         }
 
         boolean isPerfectSquare = isPerfectSquareNumber(n);
         if (isPerfectSquare) {
-            System.out.println("So " + n + " la so chinh phuong.");
+            System.out.println("\nSố " + n + " là số chính phương.");
         } else {
-            System.out.println("So " + n + " khong la so chinh phuong.");
+            System.out.println("\nSố " + n + " không phải là số chính phương..");
         }
 
         input.close();
