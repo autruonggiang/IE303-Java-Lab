@@ -7,7 +7,7 @@
   + [x] Exercise 3
   + [x] Exercise 4
   + [x] Exercise 5
-  + [ ] Exercise 6
+  + [x] Exercise 6
   + [ ] Exercise 7
   + [ ] Exercise 8
   + [ ] Exercise 9
