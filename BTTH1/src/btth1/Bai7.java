@@ -9,6 +9,7 @@ public class Bai7 {
 
         // 1. Tạo mảng B với các giá trị ngẫu nhiên
         int[] B = new int[m];
+        
         for (int i = 0; i < m; i++) {
             B[i] = (int) (Math.random() * 100); // Giả sử giá trị ngẫu nhiên từ 0 đến 99
         }

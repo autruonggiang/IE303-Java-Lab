@@ -58,12 +58,14 @@ public class Bai5 {
         // 5.
         if (Kiemtrachuoibangnhau(chuoi1, chuoi2))
             System.out.println("\n2 chuỗi s1 và s2 bằng nhau." + "\n");
+        
         else
             System.out.println("\n2 chuỗi s1 và s2 không bằng nhau." + "\t");
         
         // 6.
         if (Checkchuoilongnhau(chuoi1, chuoi2) < 0)
             System.out.println("\nChuỗi s2 không xuất hiện trong chuỗi s1." + "\t");
+        
         else
             System.out.println("\nChuỗi s2 xuất hiện trong chuỗi s1 ở vị trí: " + Checkchuoilongnhau(chuoi1, chuoi2));
     }

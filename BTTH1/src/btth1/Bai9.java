@@ -3,7 +3,6 @@ package btth1;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class Bai9 {
     // Hàm tạo danh sách ngẫu nhiên các công dân từ 0 đến N - 1
@@ -25,6 +24,7 @@ public class Bai9 {
         
         for (int i = 0; i < citizens.size(); i++) {
             int citizen = citizens.get(i);
+            
             System.out.printf("Công dân %d đã tiếp xúc với công dân %d\n", i, citizen);
         }
     }

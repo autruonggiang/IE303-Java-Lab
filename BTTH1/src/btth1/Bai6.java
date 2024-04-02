@@ -1,7 +1,6 @@
 package btth1;
 
 import java.util.Calendar;
-import java.lang.String;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;

@@ -25,9 +25,11 @@ public class Bai3 {
 
         System.out.print("\nNhập vào cạnh thứ nhất: ");
         a = input.nextFloat();
-	    System.out.print("\nNhập vào cạnh thứ hai: ");
+        
+	System.out.print("\nNhập vào cạnh thứ hai: ");
         b = input.nextFloat();
-	    System.out.print("\nNhập vào cạnh thứ ba: ");
+        
+	System.out.print("\nNhập vào cạnh thứ ba: ");
         c = input.nextFloat();
 
         if (isValidTriangle(a, b, c)) {
@@ -36,7 +38,9 @@ public class Bai3 {
 
             double area = calculateArea(a, b, c);
             System.out.println("\nDiện tích hình tam giác là: " + area);
-        } else {
+        }
+        
+        else {
             System.out.println("\nBa cạnh trên không thể tạo thành một tam giác hợp lệ!");
         }
 

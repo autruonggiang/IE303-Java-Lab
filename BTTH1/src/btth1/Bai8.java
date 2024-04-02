@@ -12,29 +12,35 @@ public class Bai8 {
     public static void playGame(Scanner scanner, int secretNumber, int low, int high, int guesses) {
         while (true) {
             System.out.printf("Đoán số trong khoảng từ %d đến %d: ", low, high);
+            
             int guess = scanner.nextInt();
             guesses++;
 
             if (guess < low || guess > high) {
                 System.out.println("\nSố bạn nhập không nằm trong phạm vi cho phép. Vui lòng nhập lại.");
+                
                 continue;
             }
 
             if (guess == secretNumber) {
                 System.out.println("Chúc mừng! Bạn đã đoán đúng số bí mật " + secretNumber);
                 System.out.println("Bạn đã đoán đúng sau " + guesses + " lần đoán.");
+               
                 break;
             } else if (guess < secretNumber) {
                 low = guess + 1;
+                
                 System.out.println("\nSố bạn đoán nhỏ hơn số bí mật.");
             } else {
                 high = guess - 1;
+                
                 System.out.println("\nSố bạn đoán lớn hơn số bí mật.");
             }
 
             // Kiểm tra nếu chỉ còn một số để đoán
             if (low == high) {
                 System.out.println("Bạn đã hết số lần đoán. Số bí mật là " + secretNumber);
+                
                 break;
             }
         }
