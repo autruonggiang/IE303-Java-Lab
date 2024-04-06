@@ -12,6 +12,7 @@
   + [x] Exercise 8
   + [x] Exercise 9
 - [ ] Week 2
+  + [x] Exercise 1
 - [ ] Week 3
 
 <!--
