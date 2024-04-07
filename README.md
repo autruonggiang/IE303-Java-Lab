@@ -1,6 +1,7 @@
 # IE303 - Java Technology's Lab
 
 ## To-Do
+### Lab
 - [x] Week 1
   + [x] Exercise 1
   + [x] Exercise 2
@@ -23,4 +24,5 @@
 - [ ] Week 6
 -->
 
+### Project Progress Report
 - Week 4, 5, 6: Project progress reporting
