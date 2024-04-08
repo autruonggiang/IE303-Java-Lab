@@ -71,6 +71,14 @@ public class Bai2 {
             System.out.println();
         }
         
+        // Liệt kê danh sách sinh viên được nhận học bổng
+        System.out.println("Danh sách sinh viên được nhận học bổng:");
+        for (int i = 0; i < n; i++) {
+            if (danhSachSV[i].duocNhanHocBong()) {
+                System.out.println(danhSachSV[i].getHoTen());
+            }
+        }
+        
         scanner.close();
     }
 }
@@ -133,6 +141,11 @@ class SinhVien {
         System.out.println("Điểm Vật lý: " + diemVatLy);
         System.out.println("Điểm Nhập môn lập trình: " + diemNhapMonLT);
         System.out.println("Điểm trung bình: " + diemTrungBinh);
+    }
+    
+    // Phương thức kiểm tra xem sinh viên có được nhận học bổng hay không
+    public boolean duocNhanHocBong() {
+        return (diemTrungBinh >= 8.0 && diemNhapMonLT >= 9.0);
     }
 }
 
