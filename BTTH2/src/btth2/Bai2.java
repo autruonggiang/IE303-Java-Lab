@@ -6,26 +6,70 @@ public class Bai2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Nhập mã số sinh viên:");
-        int maSV = scanner.nextInt();
+        // Nhập số lượng sinh viên
+        System.out.println("Nhập số lượng sinh viên:");
+        int n = scanner.nextInt();
         scanner.nextLine();
         
-        System.out.println("Nhập họ và tên sinh viên:");
-        String hoTen = scanner.nextLine();
+        // Khởi tạo mảng lưu trữ sinh viên
+        SinhVien[] danhSachSV = new SinhVien[n];
         
-        System.out.println("Nhập điểm Giải tích:");
-        double diemGiaiTich = scanner.nextDouble();
+        // Nhập thông tin cho từng sinh viên và lưu vào mảng
+        for (int i = 0; i < n; i++) {
+            System.out.println("\nNhập thông tin cho sinh viên thứ " + (i + 1) + ":");
+            
+            int maSV;
+            while (true) {
+                System.out.println("Nhập mã số sinh viên:");
+                String input = scanner.nextLine();
+                try {
+                    maSV = Integer.parseInt(input);
+                    break; // Thoát khỏi vòng lặp khi nhập mã số sinh viên thành công
+                } catch (NumberFormatException e) {
+                    System.out.println("\nMã số sinh viên phải là số nguyên. Vui lòng nhập lại!");
+                }
+            }
+            
+            System.out.println("Nhập họ và tên sinh viên:");
+            String hoTen = scanner.nextLine();
+            
+            double diemGiaiTich;
+            do {
+                System.out.println("Nhập điểm Giải tích (từ 0 đến 10):");
+                diemGiaiTich = scanner.nextDouble();
+                if (diemGiaiTich < 0 || diemGiaiTich > 10) {
+                    System.out.println("Điểm Giải tích phải từ 0 đến 10. Vui lòng nhập lại!");
+                }
+            } while (diemGiaiTich < 0 || diemGiaiTich > 10);
+            
+            double diemVatLy;
+            do {
+                System.out.println("Nhập điểm Vật lý:");
+                diemVatLy = scanner.nextDouble();
+                if (diemVatLy < 0 || diemVatLy > 10) {
+                    System.out.println("Điểm Vật lý phải từ 0 đến 10. Vui lòng nhập lại!");
+                }
+            } while (diemVatLy < 0 || diemVatLy > 10);
+            
+            double diemNhapMonLT;
+            do {
+                System.out.println("Nhập điểm Nhập môn lập trình:");
+                diemNhapMonLT = scanner.nextDouble();
+                if (diemNhapMonLT < 0 || diemNhapMonLT > 10) {
+                    System.out.println("Điểm Nhập môn lập trình phải từ 0 đến 10. Vui lòng nhập lại!");
+                }
+            } while (diemNhapMonLT < 0 || diemNhapMonLT > 10);
+            
+            // Tạo đối tượng SinhVien từ thông tin nhập vào và lưu vào mảng
+            danhSachSV[i] = new SinhVien(maSV, hoTen, diemGiaiTich, diemVatLy, diemNhapMonLT);
+        }
         
-        System.out.println("Nhập điểm Vật lý:");
-        double diemVatLy = scanner.nextDouble();
-        
-        System.out.println("Nhập điểm Nhập môn lập trình:");
-        double diemNhapMonLT = scanner.nextDouble();
-        
-        // Tạo đối tượng SinhVien từ thông tin nhập vào
-        SinhVien sv = new SinhVien(maSV, hoTen, diemGiaiTich, diemVatLy, diemNhapMonLT);
-        
-        sv.hienThiThongTin();
+        // Hiển thị thông tin của từng sinh viên trong danh sách
+        for (int i = 0; i < n; i++) {
+            System.out.println("\nThông tin sinh viên thứ " + (i + 1) + ":");
+            danhSachSV[i].hienThiThongTin();
+            System.out.println();
+        }
         
         scanner.close();
     }
@@ -83,7 +127,6 @@ class SinhVien {
     
     // Phương thức để hiển thị thông tin của sinh viên
     public void hienThiThongTin() {
-        System.out.println("\n");
         System.out.println("Mã số sinh viên: " + maSV);
         System.out.println("Họ và tên sinh viên: " + hoTen);
         System.out.println("Điểm Giải tích: " + diemGiaiTich);
