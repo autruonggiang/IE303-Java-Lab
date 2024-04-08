@@ -16,6 +16,7 @@
   + [x] Exercise 1
   + [ ] Exercise 2
     + [x] 1
+    + [x] 2
 - [ ] Week 3
 
 <!--
