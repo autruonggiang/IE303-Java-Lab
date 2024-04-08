@@ -1,5 +1,7 @@
 package btth2;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Bai2 {
@@ -7,7 +9,7 @@ public class Bai2 {
         Scanner scanner = new Scanner(System.in);
         
         // Nhập số lượng sinh viên
-        System.out.println("Nhập số lượng sinh viên:");
+        System.out.println("1. Nhập số lượng sinh viên:");
         int n = scanner.nextInt();
         scanner.nextLine();
         
@@ -65,6 +67,7 @@ public class Bai2 {
         }
         
         // Hiển thị thông tin của từng sinh viên trong danh sách
+        System.out.println("\n2. ");
         for (int i = 0; i < n; i++) {
             System.out.println("\nThông tin sinh viên thứ " + (i + 1) + ":");
             danhSachSV[i].hienThiThongTin();
@@ -72,7 +75,7 @@ public class Bai2 {
         }
         
         // Liệt kê danh sách sinh viên được nhận học bổng
-        System.out.println("Danh sách sinh viên được nhận học bổng:");
+        System.out.println("3. Danh sách sinh viên được nhận học bổng:");
         for (int i = 0; i < n; i++) {
             if (danhSachSV[i].duocNhanHocBong()) {
                 System.out.println(danhSachSV[i].getHoTen());
@@ -81,12 +84,23 @@ public class Bai2 {
         
          // Xuất thông tin sinh viên có điểm trung bình cao nhất
         double diemCaoNhat = SinhVien.timDiemTrungBinhCaoNhat(danhSachSV, n);
-        System.out.println("\nSinh viên có điểm trung bình cao nhất:");
+        System.out.println("\n4. Sinh viên có điểm trung bình cao nhất:");
         for (int i = 0; i < n; i++) {
             if (danhSachSV[i].getDiemTrungBinh() == diemCaoNhat) {
                 danhSachSV[i].hienThiThongTin();
                 break;
             }
+        }
+        
+         // Sắp xếp danh sách sinh viên giảm dần theo điểm trung bình
+        Arrays.sort(danhSachSV, Comparator.comparing(SinhVien::getDiemTrungBinh).reversed());
+        
+        // Xuất danh sách top 10 sinh viên có điểm cao nhất
+        System.out.println("\n5. Top 10 sinh viên có điểm cao nhất:");
+        int topCount = Math.min(10, n);
+        for (int i = 0; i < topCount; i++) {
+            danhSachSV[i].hienThiThongTin();
+            System.out.println();
         }
         
         scanner.close();
