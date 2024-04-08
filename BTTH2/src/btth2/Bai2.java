@@ -79,6 +79,16 @@ public class Bai2 {
             }
         }
         
+         // Xuất thông tin sinh viên có điểm trung bình cao nhất
+        double diemCaoNhat = SinhVien.timDiemTrungBinhCaoNhat(danhSachSV, n);
+        System.out.println("\nSinh viên có điểm trung bình cao nhất:");
+        for (int i = 0; i < n; i++) {
+            if (danhSachSV[i].getDiemTrungBinh() == diemCaoNhat) {
+                danhSachSV[i].hienThiThongTin();
+                break;
+            }
+        }
+        
         scanner.close();
     }
 }
@@ -146,6 +156,16 @@ class SinhVien {
     // Phương thức kiểm tra xem sinh viên có được nhận học bổng hay không
     public boolean duocNhanHocBong() {
         return (diemTrungBinh >= 8.0 && diemNhapMonLT >= 9.0);
+    }
+    
+    public static double timDiemTrungBinhCaoNhat(SinhVien[] danhSachSV, int n) {
+        double diemCaoNhat = 0;
+        for (int i = 0; i < n; i++) {
+            if (danhSachSV[i].getDiemTrungBinh() > diemCaoNhat) {
+                diemCaoNhat = danhSachSV[i].getDiemTrungBinh();
+            }
+        }
+        return diemCaoNhat;
     }
 }
 
