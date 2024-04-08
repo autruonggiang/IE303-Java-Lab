@@ -12,9 +12,9 @@
   + [x] Exercise 7
   + [x] Exercise 8
   + [x] Exercise 9
-- [ ] Week 2
+- [x] Week 2
   + [x] Exercise 1
-  + [ ] Exercise 2
+  + [x] Exercise 2
     + [x] 1
     + [x] 2
     + [x] 3
