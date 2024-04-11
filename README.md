@@ -21,6 +21,9 @@
     + [x] 4
     + [x] 5
 - [ ] Week 3
+  + [ ] Exercise 1
+  + [ ] Exercise 2
+  + [ ] Exercise 3
 
 <!--
 - [ ] Week 4
