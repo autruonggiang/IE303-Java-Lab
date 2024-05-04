@@ -24,9 +24,12 @@
   + [ ] Exercise 1
   + [ ] Exercise 2
   + [ ] Exercise 3
+- [ ] Lab 4
+  + [ ] 1
+  + [ ] 2
+  + [ ] 3
 
 <!--
-- [ ] Week 4
 - [ ] Week 5
 - [ ] Week 6
 -->
