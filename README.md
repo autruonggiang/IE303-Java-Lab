@@ -21,9 +21,8 @@
     + [x] 4
     + [x] 5
 - [ ] Lab 3
-  + [ ] Exercise 1
-  + [ ] Exercise 2
-  + [ ] Exercise 3
+  + [ ] A
+  + [ ] B
 - [ ] Lab 4
   + [ ] 1
   + [ ] 2
